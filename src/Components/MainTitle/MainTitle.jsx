@@ -5,7 +5,7 @@ const MainTitle = (props) => {
     <div className="maintitle">
       <p className="maintitle-top">{props.top}</p>
       <h2 className="maintitle-center">{props.center}</h2>
-      <p className="maintitle-bottm">{props.bottom}</p>
+      <p className="maintitle-bottom">{props.bottom}</p>
     </div>
   );
 };

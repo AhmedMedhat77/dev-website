@@ -1,0 +1,18 @@
+.home {
+  &-features {
+    @extend .header;
+
+    &__right {
+      display: flex;
+      gap: 3.2rem;
+      &-item {
+        & img {
+          object-fit: contain;
+          &:first-child {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -16,6 +16,8 @@
         @include media-prop(font-size, 1.8rem, 1.8rem, 1.6rem);
         color: $--color-black-2;
         font-weight: 300;
+        line-height: 1.4;
+        max-width: 70%;
       }
     }
     &__bottom {
@@ -35,7 +37,7 @@
       }
       &-desctiption {
         &__text {
-          font-size: 1.8rem;
+          font-size: 2rem;
           color: $--color-black-2;
           margin-bottom: 0.8rem;
         }
@@ -49,7 +51,10 @@
   }
   &__right {
     &-image {
+      box-shadow: $--box-shadow;
+      -webkit-box-shadow: $--webkit-box-shadow;
       object-fit: cover;
+      border-radius: 1rem;
     }
   }
 }

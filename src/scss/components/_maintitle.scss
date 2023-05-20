@@ -1,12 +1,26 @@
 .maintitle {
+  text-align: center;
+  margin-block: $--margin-m;
   &-top {
     font-size: 1.4rem;
     background-color: $--color-ternary;
     color: $--color-primary;
     padding: 0.2rem 1rem;
+    font-weight: 400;
+    width: max-content;
+    margin: auto;
+    border-radius: 1rem;
   }
   &-center {
+    @include media-prop(font-size, 3.6rem, 3.6rem, 2.8rem);
+    color: $--color-black-2;
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
   }
   &-bottom {
+    @include media-prop(font-size, 1.8rem, 1.8rem, 1.6rem);
+    font-weight: 300;
+    color: $--color-black-2;
   }
 }

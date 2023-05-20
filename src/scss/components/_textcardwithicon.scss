@@ -1,0 +1,19 @@
+.textcard {
+  padding: 2.4rem;
+  &-top {
+    width: 4rem;
+    height: 4rem;
+    background-color: $--color-ternary;
+    color: $--color-secondary;
+    border-radius: 50%;
+    margin-bottom: 1.6rem;
+  }
+  &-center {
+    @include media-prop(font-size, 2rem, 2rem, 1.8rem);
+    color: $--color-black-2;
+  }
+  &-bottom {
+    color: $--color-black-2;
+    font-size: 1.6rem;
+  }
+}
