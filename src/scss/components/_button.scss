@@ -1,0 +1,41 @@
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+  text-align: center;
+  white-space: nowrap;
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--primary {
+    background-color: $--color-primary;
+    color: $--color-white;
+    transition: $--transition;
+    &:is(:hover, :active, :focus) {
+      background-color: $--color-secondary;
+    }
+  }
+  &--secondary {
+    color: $--color-black-2;
+    border-color: $--color-darker-white;
+    transition: $--transition;
+    &:is(:hover, :active, :focus) {
+      // background-color: $--color-secondary;
+      // color: $--color-white;
+      border-color: $--color-secondary;
+    }
+  }
+  &--l {
+    padding: 1rem 2rem;
+    border-radius: $--paddding-xs2;
+    @include media-prop(font-size, 1.8rem, 1.6rem, 1.6rem);
+    font-weight: bold;
+  }
+  &--xl {
+    padding-block: 1rem;
+    border-radius: $--paddding-s;
+  }
+}

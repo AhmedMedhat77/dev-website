@@ -1,0 +1,20 @@
+//google font
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap");
+//abstracts Mixins
+@import "./abstracts/mixin";
+@import "./abstracts/variables";
+// base and roots
+@import "./base/reset";
+@import "./base/typography";
+
+// components
+@import "./components/button";
+@import "./components/maintitle";
+//layouts
+@import "./layouts/navbar";
+@import "./layouts/header";
+//pages
+@import "./page/home";
+@import "./page/notfound";
+// themes
+
