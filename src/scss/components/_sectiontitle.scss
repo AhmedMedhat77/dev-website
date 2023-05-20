@@ -1,0 +1,14 @@
+.sectiontitle {
+  text-align: center;
+  &-top {
+    @include media-prop(font-size, 3.6rem, 3.6rem, 3.1rem);
+    color: $--color-black-2;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+  }
+  &-bottom {
+    color: $--color-black-2;
+    font-weight: 300;
+    @include media-prop(font-size, 1.8rem, 1.8rem, 1.6rem);
+  }
+}
