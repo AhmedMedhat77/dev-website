@@ -14,6 +14,8 @@ import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import Button from "../../Components/Button/Button";
 import Accordion from "../../Components/Accordion/Accordion";
 import { FAQ } from "../../Data/FAQ";
+import ImageCard from "../../Components/ImageCard/ImageCard";
+import { ProductData } from "../../Data/Products";
 
 const Home = () => {
   return (
@@ -131,6 +133,27 @@ const Home = () => {
             />
           </div>
         </div>
+      </section>
+      <section className="home-blog">
+        <MainTitle
+          top="Blog"
+          center="Our fresh news"
+          bottom="Our blog is more than just a collection of articles - it's a hub of ideas, inspiration, and thought-provoking discussions."
+        />
+        <div className="home-blog__top">
+          {ProductData?.map((card) => {
+            return (
+              <ImageCard
+                img={card.img}
+                key={card.id}
+                title={card.title}
+                text={card.text}
+                categories={card.categories}
+              />
+            );
+          })}
+        </div>
+        <div className="home-blog__bottom"></div>
       </section>
     </div>
   );

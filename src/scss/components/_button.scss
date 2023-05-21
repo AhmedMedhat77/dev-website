@@ -9,6 +9,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    & img {
+      margin-right: 0.5rem;
+    }
   }
   &--primary {
     background-color: $--color-primary;
@@ -23,8 +26,6 @@
     border-color: $--color-darker-white;
     transition: $--transition;
     &:is(:hover, :active, :focus) {
-      // background-color: $--color-secondary;
-      // color: $--color-white;
       border-color: $--color-secondary;
     }
   }

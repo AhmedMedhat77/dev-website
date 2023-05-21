@@ -1,0 +1,42 @@
+.imagecard {
+  &__body {
+    margin-top: 1.4rem;
+    padding-inline: 1.6rem;
+    @include media-prop(margin-bottom, 2.4rem, 2.4rem, 1.6rem);
+
+    &-title {
+      @include media-prop(font-size, 2.4rem, 2.4rem, 2rem);
+      color: $--color-black-2;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    &-text {
+      color: $--color-black-2;
+      font-weight: 300;
+      line-height: 1.2;
+      font-size: 1.2rem;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &-item {
+      background-color: $--color-ternary;
+      color: $--color-primary;
+
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-left: 1rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+      white-space: nowrap;
+      &:last-child {
+        color: $--color-gray;
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+  }
+}
