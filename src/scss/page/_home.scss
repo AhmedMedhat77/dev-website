@@ -103,12 +103,22 @@
   &-freetrial {
     background-color: $--color-ternary;
     @extend.flex-center;
-    position: relative;
+  }
+  &-ourclients {
+    @include media-prop(margin, 6.4rem 11.2rem, 4.8rem 3.2rem, 3.2rem);
 
-    &-img {
-      position: absolute;
-      right: 0;
-      background-size: cover;
+    &__clientscontainer {
+      display: grid;
+      @include media-prop(
+        grid-template-columns,
+        repeat(4, 1fr),
+        repeat(2, 1fr),
+        1fr
+      );
+      gap: 3.2rem;
+      max-width: 500px;
+      justify-content: center;
+      margin: auto;
     }
   }
 }

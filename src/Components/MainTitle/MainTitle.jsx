@@ -3,9 +3,9 @@ import React from "react";
 const MainTitle = (props) => {
   return (
     <div className="maintitle">
-      <p className="maintitle-top">{props.top}</p>
+      {props.top && <p className="maintitle-top">{props.top}</p>}
       <h2 className="maintitle-center">{props.center}</h2>
-      <p className="maintitle-bottom">{props.bottom}</p>
+      {props.bottom && <p className="maintitle-bottom">{props.bottom}</p>}
     </div>
   );
 };

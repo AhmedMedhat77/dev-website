@@ -1,0 +1,19 @@
+.client-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &__img {
+    max-width: 3.2rem;
+    max-height: 3.2rem;
+    margin-right: 1rem;
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $--color-black-2;
+  }
+}

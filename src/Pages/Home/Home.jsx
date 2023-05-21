@@ -10,14 +10,15 @@ import img1 from "../../Assets/Rectangle 145.png";
 import play from "../../Assets/Icons/Play.svg";
 import img3 from "../../Assets/Rectangle 148.png";
 import img4 from "../../Assets/Right.png";
-import vector from "../../Assets/Vector.png";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import Button from "../../Components/Button/Button";
 import Accordion from "../../Components/Accordion/Accordion";
 import { FAQ } from "../../Data/FAQ";
 import ImageCard from "../../Components/ImageCard/ImageCard";
 import { ProductData } from "../../Data/Products";
+import { Clients } from "../../Data/Clients";
 import FreeTrial from "../../Components/FreeTrial/FreeTrial";
+import OurClientItem from "../../Components/OurClientsItem/OurClientItem";
 const Home = () => {
   return (
     <div className="home">
@@ -163,10 +164,20 @@ const Home = () => {
       </section>
       <section className="home-freetrial">
         <FreeTrial />
-        <div
-          className="home-freetrial-img"
-          style={{ backgroundImage: `url(${vector})` }}
-        />
+      </section>
+      <section className="home-ourclients">
+        <MainTitle center="Our Clients" />
+        <div className="home-ourclients__clientscontainer">
+          {Clients?.map((client) => {
+            return (
+              <OurClientItem
+                key={client.id}
+                img={client.img}
+                title={client.title}
+              />
+            );
+          })}
+        </div>
       </section>
     </div>
   );

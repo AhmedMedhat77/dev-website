@@ -1,13 +1,11 @@
 .accordion {
   border: 1px solid $--color-darker-white;
   border-radius: 1rem;
-
   @include media-prop(max-width, 80rem, 73.6rem, 34.3rem);
   @include media-prop(min-height, 9.2rem, 9.2rem, 5.6rem);
   @include media-prop(padding, 3.2rem, 3.2rem, 1.6rem);
-
   margin: 0 auto 1.6rem;
-
+  cursor: pointer;
   &-top {
     @extend .flex-center;
     padding-bottom: 1.6rem;

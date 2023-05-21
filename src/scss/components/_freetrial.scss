@@ -1,6 +1,6 @@
 .freetrial {
   @include media-prop(padding, 6.4rem, 6.4rem 3.2rem, 4.8rem 1.6rem);
-  position: relative;
+
   &__top {
     margin-bottom: 4rem;
     &-title {

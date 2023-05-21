@@ -5,7 +5,7 @@ const Accordion = (props) => {
   const [activeState, setActiveState] = React.useState(false);
 
   return (
-    <ul className="accordion">
+    <ul className="accordion" onClick={() => setActiveState((old) => !old)}>
       <li className="accordion-top">
         <div className="accordion-top__title">
           <div className="accordion-top__title__question">
@@ -16,10 +16,7 @@ const Accordion = (props) => {
               {props?.question}
             </h4>
           </div>
-          <div
-            className="div accordion-top__title__img"
-            onClick={() => setActiveState((old) => !old)}
-          >
+          <div className="div accordion-top__title__img">
             <img src={activeState ? minus : plus} alt="icon" />
           </div>
         </div>
@@ -34,4 +31,4 @@ const Accordion = (props) => {
   );
 };
 
-export default React.memo(Accordion);
+export default Accordion;
