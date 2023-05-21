@@ -95,9 +95,20 @@
     }
     &__bottom {
       & .btn {
-        margin:  3.2rem auto 0;
+        margin: 3.2rem auto 0;
         @include media-prop(width, "", 100%, 100%);
       }
+    }
+  }
+  &-freetrial {
+    background-color: $--color-ternary;
+    @extend.flex-center;
+    position: relative;
+
+    &-img {
+      position: absolute;
+      right: 0;
+      background-size: cover;
     }
   }
 }

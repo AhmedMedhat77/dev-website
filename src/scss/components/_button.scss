@@ -36,7 +36,9 @@
     font-weight: bold;
   }
   &--xl {
-    padding-block: 1rem;
+    padding: 1.5rem 2.2rem;
+
+    @include media-prop(font-size, 2rem, 1.9rem, 1.8rem);
     border-radius: $--paddding-s;
   }
 }

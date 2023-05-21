@@ -10,13 +10,14 @@ import img1 from "../../Assets/Rectangle 145.png";
 import play from "../../Assets/Icons/Play.svg";
 import img3 from "../../Assets/Rectangle 148.png";
 import img4 from "../../Assets/Right.png";
+import vector from "../../Assets/Vector.png";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import Button from "../../Components/Button/Button";
 import Accordion from "../../Components/Accordion/Accordion";
 import { FAQ } from "../../Data/FAQ";
 import ImageCard from "../../Components/ImageCard/ImageCard";
 import { ProductData } from "../../Data/Products";
-
+import FreeTrial from "../../Components/FreeTrial/FreeTrial";
 const Home = () => {
   return (
     <div className="home">
@@ -159,6 +160,13 @@ const Home = () => {
             styles="btn btn--primary btn--l btn-icon"
           />
         </div>
+      </section>
+      <section className="home-freetrial">
+        <FreeTrial />
+        <div
+          className="home-freetrial-img"
+          style={{ backgroundImage: `url(${vector})` }}
+        />
       </section>
     </div>
   );
