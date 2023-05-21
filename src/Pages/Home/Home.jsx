@@ -5,13 +5,16 @@ import TextCardWithIcon from "../../Components/TextCardWithIcon";
 import Mobile from "../../Assets/Icons/Mobile.svg";
 import emailOpen from "../../Assets/Icons/Email Open.svg";
 import checkMark from "../../Assets/Icons/checkmark.svg";
+import email from "../../Assets/Icons/Email.svg";
 import img1 from "../../Assets/Rectangle 145.png";
 import play from "../../Assets/Icons/Play.svg";
 import img3 from "../../Assets/Rectangle 148.png";
 import img4 from "../../Assets/Right.png";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
-
 import Button from "../../Components/Button/Button";
+import Accordion from "../../Components/Accordion/Accordion";
+import { FAQ } from "../../Data/FAQ";
+
 const Home = () => {
   return (
     <div className="home">
@@ -91,6 +94,40 @@ const Home = () => {
               text="Watch demo"
               styles={"btn btn--l btn--secondary btn-icon"}
               icon={play}
+            />
+          </div>
+        </div>
+      </section>
+      <section className="homa-faq">
+        <SectionTitle
+          title="Frequently Asked Questions"
+          description="We tried to answer most common questions, if you have any additional, please get in touch with our friendly team"
+        />
+        <div className="home-faq__top">
+          {FAQ?.map((item, i) => {
+            return (
+              <Accordion
+                count={i + 1}
+                key={item.id}
+                question={item.title}
+                answer={item.answer}
+              />
+            );
+          })}
+        </div>
+        <div className="home-faq__bottom">
+          <div className="home-faq__bottom__content">
+            <h4 className="home-faq__bottom__content-title">
+              Still have a questions?
+            </h4>
+            <p className="home-faq__bottom__content-text">
+              We're sorry we couldn't provide you with the information you were
+              looking for. Please contact us and we'll be happy to help.
+            </p>
+            <Button
+              icon={email}
+              text={"Contact us"}
+              styles="btn btn--primary btn--l btn-icon"
             />
           </div>
         </div>

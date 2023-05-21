@@ -54,4 +54,35 @@
       }
     }
   }
+  &-faq {
+    &__top {
+      margin-top: 2.4rem;
+    }
+    &__bottom {
+      @extend .flex-center;
+      flex-direction: column;
+      margin-top: 4.2rem;
+      &__content {
+        @include media-prop(padding, 3.2rem, 2.4rem, 2.4rem);
+        background-color: $--color-ternary;
+        text-align: center;
+        border-radius: 1rem;
+        &-title {
+          font-size: 2rem;
+          color: $--color-secondary;
+          margin-bottom: 1.2rem;
+        }
+        &-text {
+          font-size: 1.4rem;
+          color: $--color-secondary;
+          max-width: 80%;
+          margin: 0 auto 3.2rem;
+        }
+        & .btn {
+          margin: auto;
+          @include media-prop(width, "", 100%, 100%);
+        }
+      }
+    }
+  }
 }
