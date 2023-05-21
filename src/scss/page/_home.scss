@@ -94,6 +94,10 @@
       @include media-prop(gap, 3.2rem, 3.2rem, 1.6rem);
     }
     &__bottom {
+      & .btn {
+        margin:  3.2rem auto 0;
+        @include media-prop(width, "", 100%, 100%);
+      }
     }
   }
 }

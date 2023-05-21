@@ -153,7 +153,12 @@ const Home = () => {
             );
           })}
         </div>
-        <div className="home-blog__bottom"></div>
+        <div className="home-blog__bottom">
+          <Button
+            text={"Learn More"}
+            styles="btn btn--primary btn--l btn-icon"
+          />
+        </div>
       </section>
     </div>
   );
