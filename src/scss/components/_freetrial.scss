@@ -19,14 +19,16 @@
   &__bottom {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+
     &-input {
       background-color: #fff;
       outline: 1px solid transparent;
       padding: 2.5rem 2rem;
       border: 1px solid transparent;
       @include media-prop(width, 70%, 100%, 100%);
-      margin-right: 2rem;
-      border-radius: 2rem;
+      @include media-prop(margin-bottom, "nil", 1rem, 1rem);
+      border-radius: 1rem;
       box-shadow: $--box-shadow;
       -webkit-box-shadow: $--webkit-box-shadow;
       &::placeholder {

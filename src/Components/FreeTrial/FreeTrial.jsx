@@ -18,6 +18,7 @@ const FreeTrial = () => {
           type="email"
           placeholder="Your e-mail adress"
           className="freetrial__bottom-input"
+          required
         />
 
         <Button text="Subscribe" styles="btn btn--xl btn--primary" />
