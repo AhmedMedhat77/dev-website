@@ -47,12 +47,13 @@
     &__list {
       &-title {
         color: $--color-black-2;
-        font-size: 1.8rem;
+        @include media-prop(font-size, 2.2rem, 1.8rem, 1.8rem);
         font-weight: 500;
         margin-bottom: 1.6rem;
       }
       &-item {
-        margin-bottom: 1.6rem;
+        @include media-prop(font-size, 1.8rem, 1.8rem, 1.8rem);
+        margin-bottom: 1.2rem;
         &-link {
           color: $--color-black-2;
           display: flex;
