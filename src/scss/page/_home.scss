@@ -22,18 +22,18 @@
 
     &__top {
       padding-top: 3.2rem;
-      display: flex;
-      justify-content: center;
       @include media-prop(flex-direction, row, column, column);
-      align-items: center;
       gap: 3.2rem;
+      display: flex;
+
       &-item {
         display: flex;
         align-items: center;
         white-space: nowrap;
-        width: 10.6rem;
         justify-content: space-between;
-        @include media-prop(margin-left, 3.2rem, 0, 0);
+        
+        margin: auto;
+
         &-img {
           margin-right: 0.8rem;
         }

@@ -12,7 +12,7 @@ export const RoutePathes = Object.freeze({
 const ROUTES = [
   {
     id: "Home",
-    name: "Home",
+    name: "ROUTES.home",
     path: RoutePathes.Home,
     Element: <Home />,
     isHidden: false,
@@ -20,14 +20,14 @@ const ROUTES = [
   },
   {
     id: "features",
-    name: "Features",
+    name: "ROUTES.features",
     path: RoutePathes.Features,
     Element: "",
     isHidden: false,
   },
   {
     id: "about",
-    name: "About us",
+    name: "ROUTES.abooutus",
     path: RoutePathes.Aboutus,
     Element: "",
     isHidden: false,
@@ -35,7 +35,7 @@ const ROUTES = [
 
   {
     id: "news",
-    name: "News",
+    name: "ROUTES.news",
     path: RoutePathes.News,
     Element: "",
     isHidden: false,
@@ -43,15 +43,8 @@ const ROUTES = [
 
   {
     id: "contact",
-    name: "Contact",
+    name: "ROUTES.contact",
     path: RoutePathes.Contactus,
-    Element: "",
-    isHidden: false,
-  },
-  {
-    id: "start",
-    name: "Start now",
-    path: RoutePathes.StartNow,
     Element: "",
     isHidden: false,
   },

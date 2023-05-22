@@ -20,10 +20,10 @@
   body[dir="rtl"] & {
     #{$rightProperty}: $value;
   }
-  body &{
+  body & {
     #{$leftProperty}: $value;
   }
-  body[dir="ltr"] &{
+  body[dir="ltr"] & {
     #{$leftProperty}: $value;
   }
 }
