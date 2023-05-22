@@ -3,13 +3,15 @@ import play from "../../Assets/Icons/Play.svg";
 import rate from "../../Assets/Icons/star.svg";
 import banner from "../../Assets/banner.jpg";
 import Button from "../../Components/Button";
+import { useTranslation } from "react-i18next";
 const Header = () => {
+  const { t } = useTranslation();
   return (
     <div className="header">
       <div className="header__left">
         <div className="header__left__top">
           <h1 className="header__left__top-title">
-            Everything you need to scale a <span>global team</span>
+            {t("Header.title")} <span>{t("Header.span")}</span>
           </h1>
           <p className="header__left__top-description">
             Check out our proven methods, guides, and exercises that help make

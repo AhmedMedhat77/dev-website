@@ -1,0 +1,14 @@
+{
+  "ROUTES": {
+    "home": "Home",
+    "features": "Features",
+    "aboutus": "About Us",
+    "news": "News ",
+    "contact": "Contact",
+    "startnow": "Start Now"
+  },
+  "Header": {
+    "title": "  Everything you need to scale a",
+    "span": "global team"
+  }
+}
