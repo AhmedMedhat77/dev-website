@@ -7,8 +7,93 @@
     "contact": "Contact",
     "startnow": "Start Now"
   },
+
   "Header": {
     "title": "  Everything you need to scale a",
-    "span": "global team"
+    "span": "global team",
+    "description": "Check out our proven methods, guides, and exercises that help make work better, and people happier.",
+    "btnPrimary": "Learn More",
+    "btnSecondary": "Watch Demo",
+    "text": "Trusted by over than 1M customers"
+  },
+
+  "FeaturesSection": {
+    "MainTitle": {
+      "top": "Our Features",
+      "center": "Our key benefits",
+      "bottom": "Our services are designed to cater to your specific needs and goals"
+    },
+    "TextCard": {
+      "title1": "Project Structure",
+      "text1": "Check out our proven methods, guides, and exercises that help make work better, and people happier.",
+      "title2": "Responsive",
+      "text2": "This Design System and UI kit is coming with full-responsive screens for tablet and mobile devices.",
+      "title3": "Messaging",
+      "text3": "On mobile, customers can send text, or audio messages to agents, like using any messaging app"
+    }
+  },
+  "homeadd": {
+    "title": "Streamline your workflow with SaaS: Get started now",
+    "subtitle": "Stay up to date with the most relevant information",
+    "adds": {
+      "one": "Unlimited pages",
+      "two": "Easy Access",
+      "three": "14-days Free Trial"
+    }
+  },
+  "FAQ": {
+    "MainTitle": {
+      "title": "Frequently Asked Questions",
+      "text": "We tried to answer most common questions, if you have any additional, please get in touch with our friendly team"
+    },
+    "Questions": {
+      "one": {
+        "question": "How Whitespace UI kit and Design System can help me?",
+        "answer": "The main feature of Whitespace UI that it saves you time. If it saves you time, it automatically saves you money. You no longer have to create a new UI kit from scratch before starting each project. Use Whitespace UI on an unlimited number of projects and save hundreds of hours and thousands of dollars."
+      },
+      "two": {
+        "question": "What is your return policy?",
+        "answer": "The main feature of Whitespace UI that it saves you time. If it saves you time, it automatically saves you money. You no longer have to create a new UI kit from scratch before starting each project. Use Whitespace UI on an unlimited number of projects and save hundreds of hours and thousands of dollars."
+      },
+      "three": {
+        "question": "How can I contact customer support?",
+        "answer": "The main feature of Whitespace UI that it saves you time. If it saves you time, it automatically saves you money. You no longer have to create a new UI kit from scratch before starting each project. Use Whitespace UI on an unlimited number of projects and save hundreds of hours and thousands of dollars."
+      },
+      "four": {
+        "question": "What payment methods do you accept?",
+        "answer": "The main feature of Whitespace UI that it saves you time. If it saves you time, it automatically saves you money. You no longer have to create a new UI kit from scratch before starting each project. Use Whitespace UI on an unlimited number of projects and save hundreds of hours and thousands of dollars."
+      },
+      "five": {
+        "question": "What is Figma Offer?",
+        "answer": "The main feature of Whitespace UI that it saves you time. If it saves you time, it automatically saves you money. You no longer have to create a new UI kit from scratch before starting each project. Use Whitespace UI on an unlimited number of projects and save hundreds of hours and thousands of dollars."
+      }
+    },
+    "Contact": {
+      "title": "Still have a questions?",
+      "text": "We're sorry we couldn't provide you with the information you were looking for. Please contact us and we'll be happy to help.",
+      "btn": "Contact Us"
+    }
+  },
+  "Blog": {
+    "MainTitle": {
+      "top": "Blog",
+      "center": "Our fresh news",
+      "bottom": "Our blog is more than just a collection of articles - it's a hub of ideas, inspiration, and thought-provoking discussions."
+    },
+    "Card": {
+      "title": "Meet an web designer in his studio in Amsterdam",
+      "text": "We'll get to know the designer and their design philosophy, as well as take a look...",
+      "more": "more"
+    },
+    "Button": "Learn More"
+  },
+  "FreeTrial": {
+    "title": "Enter your e-mail address and get started for free",
+    "text": "Stay up to date with the most relevant information, our new collections, news and special offers!",
+    "placeholder": "Your email adress",
+    "btn": "Subscribe"
+  },
+  "OurClients": {
+    "title": "Our Clients"
   }
 }

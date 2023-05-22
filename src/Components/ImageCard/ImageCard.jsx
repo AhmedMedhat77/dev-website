@@ -1,8 +1,10 @@
 import React from "react";
 import Avatar from "../../Assets/Avatar.png";
 import CommentUserDetails from "../CommentUserDetails/CommentUserDetails";
+import { useTranslation } from "react-i18next";
 const date = new Date().toLocaleDateString();
 const ImageCard = (props) => {
+  const { t } = useTranslation();
   return (
     <div className="imagecard">
       <div className="imagecard__img">
@@ -21,7 +23,7 @@ const ImageCard = (props) => {
             </div>
           );
         })}
-        <span className="imagecard__footer-item">+2 more</span>
+        <span className="imagecard__footer-item">+2{t("Blog.Card.more")} </span>
       </div>
     </div>
   );

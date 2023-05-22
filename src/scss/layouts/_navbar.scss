@@ -11,6 +11,14 @@
       object-fit: contain;
     }
   }
+  &-language {
+    max-width: 3rem;
+    max-height: 3rem;
+    cursor: pointer;
+    & img {
+      object-fit: cover;
+    }
+  }
   &__right {
     display: flex;
     align-items: center;
@@ -32,7 +40,6 @@
           font-size: 1.6rem;
           font-weight: normal;
           line-height: 2.4rem;
-         
         }
       }
     }

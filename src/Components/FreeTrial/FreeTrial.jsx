@@ -1,30 +1,26 @@
 import React from "react";
 import Button from "../Button/Button";
-
+import { useTranslation } from "react-i18next";
 const FreeTrial = () => {
+  const { t } = useTranslation();
   return (
     <div className="freetrial">
       <div className="freetrial__top">
-        <h2 className="freetrial__top-title">
-          Enter your e-mail address and get started for free
-        </h2>
-        <p className="freetrial__top-text">
-          Stay up to date with the most relevant information, our new
-          collections, news and special offers!
-        </p>
+        <h2 className="freetrial__top-title">{t("FreeTrial.title")}</h2>
+        <p className="freetrial__top-text">{t("FreeTrial.text")}</p>
       </div>
       <div className="freetrial__bottom">
         <input
           type="email"
-          placeholder="Your e-mail adress"
+          placeholder={t("FreeTrial.placeholder")}
           className="freetrial__bottom-input"
           required
         />
 
-        <Button text="Subscribe" styles="btn btn--xl btn--primary" />
+        <Button text={t("FreeTrial.btn")} styles="btn btn--xl btn--primary" />
       </div>
     </div>
   );
 };
 
-export default FreeTrial;
+export default React.memo(FreeTrial);

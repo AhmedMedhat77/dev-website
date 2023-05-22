@@ -19,31 +19,34 @@ import { ProductData } from "../../Data/Products";
 import { Clients } from "../../Data/Clients";
 import FreeTrial from "../../Components/FreeTrial/FreeTrial";
 import OurClientItem from "../../Components/OurClientsItem/OurClientItem";
+import { useTranslation } from "react-i18next";
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="home">
       <Header />
       <MainTitle
-        top="Our Features"
-        center="Our key benefits"
-        bottom="Our services are designed to cater to your specific needs and goals"
+        top={t("FeaturesSection.MainTitle.top")}
+        center={t("FeaturesSection.MainTitle.center")}
+        bottom={t("FeaturesSection.MainTitle.bottom")}
       />
       <section className="home-features container">
         <div className="home-feature__left">
           <TextCardWithIcon
             icon={checkMark}
-            title="Project Structure"
-            text="Check out our proven methods, guides, and exercises that help make work better, and people happier."
+            title={t("FeaturesSection.TextCard.title1")}
+            text={t("FeaturesSection.TextCard.text1")}
           />
           <TextCardWithIcon
             icon={Mobile}
-            title="Responsive"
-            text="This Design System and UI kit is coming with full-responsive screens for tablet and mobile devices."
+            title={t("FeaturesSection.TextCard.title2")}
+            text={t("FeaturesSection.TextCard.text2")}
           />
           <TextCardWithIcon
             icon={emailOpen}
-            title="Messaging"
-            text="On mobile, customers can send text, or audio messages to agents, like using any messaging app"
+            title={t("FeaturesSection.TextCard.title3")}
+            text={t("FeaturesSection.TextCard.text3")}
           />
         </div>
         <div className="home-features__right">
@@ -58,8 +61,8 @@ const Home = () => {
       </section>
       <section className="home-add">
         <SectionTitle
-          title="Streamline your workflow with SaaS: Get started now"
-          description="Stay up to date with the most relevant information"
+          title={t("homeadd.title")}
+          description={t("homeadd.subtitle")}
         />
 
         <div className="home-add__top">
@@ -69,7 +72,7 @@ const Home = () => {
               src={checkMark}
               alt="checkmark"
             />
-            <p className="home-add__top-item-text">Unlimited pages</p>
+            <p className="home-add__top-item-text">{t("homeadd.adds.one")}</p>
           </div>
           <div className="home-add__top-item">
             <img
@@ -77,7 +80,7 @@ const Home = () => {
               src={checkMark}
               alt="checkmark"
             />
-            <p className="home-add__top-item-text">Easy Access</p>
+            <p className="home-add__top-item-text">{t("homeadd.adds.two")}</p>
           </div>
           <div className="home-add__top-item">
             <img
@@ -85,17 +88,20 @@ const Home = () => {
               src={checkMark}
               alt="checkmark"
             />
-            <p className="home-add__top-item-text"> 14-days free trial</p>
+            <p className="home-add__top-item-text">{t("homeadd.adds.three")}</p>
           </div>
         </div>
 
         <div className="home-add__bottom">
           <div className="home-add__bottom-item">
-            <Button text="Get Started" styles={"btn btn--l btn--primary"} />
+            <Button
+              text={t("Header.btnPrimary")}
+              styles={"btn btn--l btn--primary"}
+            />
           </div>
           <div className="home-add__bottom-item">
             <Button
-              text="Watch demo"
+              text={t("Header.btnSecondary")}
               styles={"btn btn--l btn--secondary btn-icon"}
               icon={play}
             />
@@ -104,8 +110,8 @@ const Home = () => {
       </section>
       <section className="homa-faq">
         <SectionTitle
-          title="Frequently Asked Questions"
-          description="We tried to answer most common questions, if you have any additional, please get in touch with our friendly team"
+          title={t("FAQ.MainTitle.title")}
+          description={t("FAQ.MainTitle.text")}
         />
         <div className="home-faq__top">
           {FAQ?.map((item, i) => {
@@ -113,8 +119,8 @@ const Home = () => {
               <Accordion
                 count={i + 1}
                 key={item.id}
-                question={item.title}
-                answer={item.answer}
+                question={t(item.title)}
+                answer={t(item.answer)}
               />
             );
           })}
@@ -122,15 +128,14 @@ const Home = () => {
         <div className="home-faq__bottom">
           <div className="home-faq__bottom__content">
             <h4 className="home-faq__bottom__content-title">
-              Still have a questions?
+              {t("FAQ.Contact.title")}
             </h4>
             <p className="home-faq__bottom__content-text">
-              We're sorry we couldn't provide you with the information you were
-              looking for. Please contact us and we'll be happy to help.
+              {t("FAQ.Contact.text")}
             </p>
             <Button
               icon={email}
-              text={"Contact us"}
+              text={t("FAQ.Contact.btn")}
               styles="btn btn--primary btn--l btn-icon"
             />
           </div>
@@ -138,9 +143,9 @@ const Home = () => {
       </section>
       <section className="home-blog">
         <MainTitle
-          top="Blog"
-          center="Our fresh news"
-          bottom="Our blog is more than just a collection of articles - it's a hub of ideas, inspiration, and thought-provoking discussions."
+          top={t("Blog.MainTitle.top")}
+          center={t("Blog.MainTitle.center")}
+          bottom={t("Blog.MainTitle.bottom")}
         />
         <div className="home-blog__top">
           {ProductData?.map((card) => {
@@ -148,8 +153,8 @@ const Home = () => {
               <ImageCard
                 img={card.img}
                 key={card.id}
-                title={card.title}
-                text={card.text}
+                title={t(card.title)}
+                text={t(card.text)}
                 categories={card.categories}
               />
             );
@@ -157,7 +162,7 @@ const Home = () => {
         </div>
         <div className="home-blog__bottom">
           <Button
-            text={"Learn More"}
+            text={t("Blog.Button")}
             styles="btn btn--primary btn--l btn-icon"
           />
         </div>
@@ -166,7 +171,7 @@ const Home = () => {
         <FreeTrial />
       </section>
       <section className="home-ourclients">
-        <MainTitle center="Our Clients" />
+        <MainTitle center={t("OurClients.title")} />
         <div className="home-ourclients__clientscontainer">
           {Clients?.map((client) => {
             return (

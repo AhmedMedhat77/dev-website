@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 
 import "./scss/main.scss";
@@ -22,16 +22,15 @@ i18n
     backend: {
       loadPath: "assets/locales/{{lng}}/translation.json",
     },
-    React: {
-      useSuspense: false,
-    },
   });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Suspense>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Suspense>
   </React.StrictMode>
 );

@@ -14,18 +14,20 @@ const Header = () => {
             {t("Header.title")} <span>{t("Header.span")}</span>
           </h1>
           <p className="header__left__top-description">
-            Check out our proven methods, guides, and exercises that help make
-            work better, and people happier.
+            {t("Header.description")}
           </p>
         </div>
         <div className="header__left__bottom">
           <div className="header__left__bottom-actions">
             <div className="header__left__bottom-actions__item">
-              <button className="btn btn--primary btn--l">Learn More</button>
+              <Button
+                text={t("Header.btnPrimary")}
+                styles={"btn btn--primary btn--l"}
+              />
             </div>
             <div className="header__left__bottom-actions__item">
               <Button
-                text="Watch Demo"
+                text={t("Header.btnSecondary")}
                 icon={play}
                 styles={"btn--secondary btn--l btn btn-icon "}
               />
@@ -33,7 +35,7 @@ const Header = () => {
           </div>
           <div className="header__left__bottom-desctiption">
             <p className="header__left__bottom-desctiption__text">
-              Trusted by over than 1M customers
+              {t("Header.text")}
             </p>
             <div className="header__left__bottom-desctiption__rate">
               <img src={rate} alt="star" />
