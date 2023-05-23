@@ -95,5 +95,37 @@
   },
   "OurClients": {
     "title": "Our Clients"
+  },
+  "Footer": {
+    "left": {
+      "logo": "Ahmed Medhat",
+      "text": "We love working with ambitious people. Let's build something great together now."
+    },
+    "right": {
+      "section1": {
+        "title": "Company"
+      },
+      "section2": {
+        "title": "Support",
+        "list": {
+          "one": "Help Center",
+          "two": "Status",
+          "three": "Report A Bug",
+          "four": "Chat",
+          "five": "Support"
+        }
+      },
+      "section3": {
+        "title": "Contact us"
+      }
+    },
+    "bottom": {
+      "left": " - All rights reserved",
+
+      "right": {
+        "terms": "Tearms of service",
+        "privacy": "Privacy Policy"
+      }
+    }
   }
 }

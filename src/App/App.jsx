@@ -17,6 +17,7 @@ function App() {
                 key={route.id}
                 element={route.Element}
                 index={route?.index && route.index}
+                path={route.path}
               />
             );
           })}

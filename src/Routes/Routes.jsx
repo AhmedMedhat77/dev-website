@@ -1,11 +1,11 @@
 import Home from "../Pages/Home/Home";
-
+import Contact from "../Pages/Contact/Contact";
 export const RoutePathes = Object.freeze({
   Home: "/",
   Features: "/features",
-  Aboutus: "/about-us",
+  Aboutus: "/about",
   News: "/news",
-  Contactus: "/contact-us",
+  Contactus: "/contact",
   StartNow: "/start-now",
 });
 
@@ -27,7 +27,7 @@ const ROUTES = [
   },
   {
     id: "about",
-    name: "ROUTES.abooutus",
+    name: "ROUTES.aboutus",
     path: RoutePathes.Aboutus,
     Element: "",
     isHidden: false,
@@ -45,7 +45,7 @@ const ROUTES = [
     id: "contact",
     name: "ROUTES.contact",
     path: RoutePathes.Contactus,
-    Element: "",
+    Element: <Contact />,
     isHidden: false,
   },
 ];

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../Assets/logo.png";
+import Logo from "../../Assets/Icons/Logo.svg";
 import menuIcon from "../../Assets/Icons/Icon Button.svg";
 import { Link } from "react-router-dom";
 import arFlag from "../../Assets/Flag_of_Saudi_Arabia.svg.png";

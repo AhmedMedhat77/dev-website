@@ -1,0 +1,61 @@
+.contact {
+  @extend .header;
+  @include media-prop(padding-block, 10rem, 5rem, 4rem);
+  place-items: center;
+  &-left {
+    &__item {
+      &-img {
+        width: 3rem;
+        margin-bottom: 0.3rem;
+      }
+      &-title {
+        @include media-prop(font-size, 2rem, 1.8rem, 1.8rem);
+        color: $--color-black-2;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      &-text {
+        @include media-prop(font-size, 1.8rem, 1.6rem, 1.6rem);
+        color: $--color-gray;
+      }
+    }
+  }
+  &-right {
+    &-top {
+      &__title {
+        @include media-prop(font-size, 2.5rem, 2rem, 2rem);
+        color: $--color-primary;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      &__text {
+        font-size: 1.6rem;
+        color: $--color-black-2;
+        font-weight: 300;
+        max-width: 70%;
+        margin-bottom: 1rem;
+      }
+    }
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      &__input {
+        margin-bottom: 1.6rem;
+        border: 1px solid $--color-darker-white;
+        @extend .freetrial__bottom-input;
+        &::placeholder {
+          font-size: 1.6rem;
+          color: $--color-gray;
+          font-weight: 400;
+        }
+        &:is(:active, :focus) {
+          border-color: $--color-primary;
+        }
+        &.textarea {
+          resize: none;
+          min-height: 15rem;
+        }
+      }
+    }
+  }
+}

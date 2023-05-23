@@ -6,20 +6,20 @@ import facebook from "../../Assets/footer/Facebook.svg";
 import location from "../../Assets/footer/Location Point.svg";
 import twitter from "../../Assets/footer/twitter.svg";
 import instgram from "../../Assets/footer/instagram.svg";
-import logo from "../../Assets/logo.png";
+import logo from "../../Assets/Icons/Logo.svg";
+import ROUTES from "../../Routes/Routes";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <>
       <footer className="footer">
         <div className="footer__left">
           <Link to="/" className="footer__left-logo">
             <img src={logo} alt="wafi logo" />
-            <h1 className="footer__left-text">WafiTop</h1>
+            <h1 className="footer__left-text">{t("Footer.left.logo")}</h1>
           </Link>
-          <p className="footer__left-text">
-            We love working with ambitious people. Let's build something great
-            together now.
-          </p>
+          <p className="footer__left-text">{t("Footer.left.text")}</p>
           <div className="footer__left-social">
             <Link to="" className="footer__left-social-item">
               <img src={instgram} alt="instgram" />
@@ -34,63 +34,52 @@ const Footer = () => {
         </div>
         <div className="footer__right">
           <ul className="footer__right__list">
-            <h2 className="footer__right__list-title">Company</h2>
+            <h2 className="footer__right__list-title">
+              {t("Footer.right.section1.title")}
+            </h2>
+            {ROUTES?.map((route) => {
+              return (
+                <li className="footer__right__list-item" key={route.id}>
+                  <Link
+                    to={route.path}
+                    className="footer__right__list-item-link"
+                  >
+                    {t(route.name)}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="footer__right__list">
+            <h2 className="footer__right__list-title">
+              {t("Footer.right.section2.title")}
+            </h2>
             <li className="footer__right__list-item">
               <Link to="/" className="footer__right__list-item-link">
-                Home
+                {t("Footer.right.section2.list.two")}
               </Link>
             </li>
             <li className="footer__right__list-item">
               <Link to="/" className="footer__right__list-item-link">
-                About
+                {t("Footer.right.section2.list.three")}
               </Link>
             </li>
             <li className="footer__right__list-item">
               <Link to="/" className="footer__right__list-item-link">
-                Careers
+                {t("Footer.right.section2.list.four")}
               </Link>
             </li>
             <li className="footer__right__list-item">
               <Link to="/" className="footer__right__list-item-link">
-                News
-              </Link>
-            </li>
-            <li className="footer__right__list-item">
-              <Link to="/" className="footer__right__list-item-link">
-                Blog
-              </Link>
-            </li>
-            <li className="footer__right__list-item">
-              <Link to="/" className="footer__right__list-item-link">
-                Contact
+                {t("Footer.right.section2.list.five")}
               </Link>
             </li>
           </ul>
           <ul className="footer__right__list">
-            <h2 className="footer__right__list-title">Support</h2>
-            <li className="footer__right__list-item">
-              <Link to="/" className="footer__right__list-item-link">
-                Help Center
-              </Link>
-            </li>
-            <li className="footer__right__list-item">
-              <Link to="/" className="footer__right__list-item-link">
-                Status
-              </Link>
-            </li>
-            <li className="footer__right__list-item">
-              <Link to="/" className="footer__right__list-item-link">
-                Report a Bug
-              </Link>
-            </li>
-            <li className="footer__right__list-item">
-              <Link to="/" className="footer__right__list-item-link">
-                Chat Support
-              </Link>
-            </li>
-          </ul>
-          <ul className="footer__right__list">
-            <h2 className="footer__right__list-title">Contact us</h2>
+            <h2 className="footer__right__list-title">
+              {" "}
+              {t("Footer.right.section3.title")}
+            </h2>
             <li className="footer__right__list-item">
               <Link
                 to="mailto:wafitop@wafitop.com"
@@ -117,14 +106,14 @@ const Footer = () => {
       </footer>
       <div className="footer__bottom">
         <p className="footer__bottom-left">
-          &copy; 2023 Whitespace UI - All rights reserved
+          &copy; 2023 {t("Footer.bottom.left")}
         </p>
         <div className="footer__bottom-right">
           <Link to="/" className="footer__bottom-right-item">
-            Tearms of service
+            {t("Footer.bottom.right.terms")}
           </Link>
           <Link to="/" className="footer__bottom-right-item">
-            Privacy Policy
+            {t("Footer.bottom.right.privacy")}
           </Link>
         </div>
       </div>
